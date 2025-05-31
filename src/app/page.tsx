@@ -248,7 +248,7 @@ export default function HomePage() {
                 <h3 className="text-2xl font-bold text-white mb-4">Ice Melting Point</h3>
                 <p className="text-blue-100 mb-6 leading-relaxed">
                   Predict ice melting points based on environmental conditions including 
-                  temperature, seasonal variations, and temporal factors. fgfdgf
+                  temperature, seasonal variations, and temporal factors.
                 </p>
                 
                 <div className="flex flex-wrap gap-2">
