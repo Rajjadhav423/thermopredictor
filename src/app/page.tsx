@@ -306,7 +306,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Waves, Snowflake, ChevronRight, Thermometer, Droplets, GraduationCap, Users, MapPin } from 'lucide-react'
+import { Waves, Snowflake, ChevronRight, Thermometer, Droplets, Users, MapPin } from 'lucide-react'
 
 export default function HomePage() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
