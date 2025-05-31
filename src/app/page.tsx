@@ -397,7 +397,7 @@ export default function HomePage() {
             <div className="flex items-center justify-center space-x-4 mb-8">
               <Waves className="text-cyan-300 animate-bounce" size={48} />
               <h1 className="text-6xl font-bold text-white bg-gradient-to-r from-cyan-300 to-blue-200 bg-clip-text text-transparent">
-                Water-Energy-Nexus Lab
+                Thermopredictor
               </h1>
               <Snowflake className="text-blue-200 animate-spin-slow" size={48} />
             </div>
