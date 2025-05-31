@@ -117,7 +117,7 @@ export default function SeawaterPage() {
               <div>
                 <label className="block text-cyan-200 text-sm font-medium mb-2">
                   <Thermometer className="inline mr-2" size={16} />
-                  Temperature (°C)
+                  Temperature (K)
                 </label>
                 <input
                   type="number"
@@ -133,7 +133,7 @@ export default function SeawaterPage() {
               <div>
                 <label className="block text-cyan-200 text-sm font-medium mb-2">
                   <Waves className="inline mr-2" size={16} />
-                  Salinity (ppt)
+                  Salinity (ppm)
                 </label>
                 <input
                   type="number"

@@ -104,7 +104,7 @@ export default function IceMeltingPage() {
               <div>
                 <label className="block text-blue-200 text-sm font-medium mb-2">
                   <Thermometer className="inline mr-2" size={16} />
-                  Temperature (°C)
+                  Temperature (K)
                 </label>
                 <input
                   type="number"
@@ -192,7 +192,7 @@ export default function IceMeltingPage() {
                     <Snowflake className="mx-auto mb-4 text-blue-300" size={48} />
                     <h3 className="text-lg text-blue-200 mb-2">Ice Melting Point</h3>
                     <div className="text-4xl font-bold text-white mb-4">
-                      {result.toFixed(2)}°C
+                      {result.toFixed(2)} (gton)
                     </div>
                     
                     {(() => {
@@ -215,16 +215,16 @@ export default function IceMeltingPage() {
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
                       <span className="text-blue-300">Input Temperature:</span>
-                      <span className="text-white font-semibold">{temperature}°C</span>
+                      <span className="text-white font-semibold">{temperature}K</span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-blue-300">Predicted Melting Point:</span>
-                      <span className="text-white font-semibold">{result.toFixed(2)}°C</span>
+                      <span className="text-white font-semibold">{result.toFixed(2)}K</span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-blue-300">Temperature Difference:</span>
                       <span className={`font-semibold ${parseFloat(temperature) > result ? 'text-red-300' : 'text-blue-300'}`}>
-                        {(parseFloat(temperature) - result).toFixed(2)}°C
+                        {(parseFloat(temperature) - result).toFixed(2)}K
                       </span>
                     </div>
                   </div>
