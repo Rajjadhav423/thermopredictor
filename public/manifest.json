@@ -1,6 +1,6 @@
 {
   "name": "thermopredictor app",
-  "short_name": "Thermopredictot",
+  "short_name": "Thermopredictor",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
