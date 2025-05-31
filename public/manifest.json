@@ -1,6 +1,6 @@
 {
-  "name": "Lignin App",
-  "short_name": "Lignin",
+  "name": "thermopredictor app",
+  "short_name": "Thermopredictot",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
