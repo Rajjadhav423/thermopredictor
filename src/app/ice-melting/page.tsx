@@ -22,18 +22,18 @@ export default function IceMeltingPage() {
     setError('')
 
     try {
-      const response = await fetch('https://ligninchatbot.onrender.com/predict_ice', {
+      const response = await fetch('https://ligninchatbot.onrender.com/predict/ice', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          temperature: parseFloat(temperature),
+          temperature_k: parseFloat(temperature),
           year: parseInt(year),
           month: parseInt(month),
         }),
       })
-
+      console.log("response is ", response)
       if (!response.ok) {
         throw new Error('Prediction failed')
       }
@@ -41,7 +41,8 @@ export default function IceMeltingPage() {
       console.log("response is ", response)
 
       const data = await response.json()
-      setResult(data.ice_melting_point)
+      console.log("data is ",data)
+      setResult(data.predicted_ice_melting_rate)
     } catch (err) {
       console.error(err);
       setError('Failed to get prediction. Please try again.')
@@ -192,7 +193,7 @@ export default function IceMeltingPage() {
                     <Snowflake className="mx-auto mb-4 text-blue-300" size={48} />
                     <h3 className="text-lg text-blue-200 mb-2">Ice Melting Point</h3>
                     <div className="text-4xl font-bold text-white mb-4">
-                      {result.toFixed(2)} (gton)
+                      {result} (gton)
                     </div>
                     
                     {(() => {
@@ -219,12 +220,12 @@ export default function IceMeltingPage() {
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-blue-300">Predicted Melting Point:</span>
-                      <span className="text-white font-semibold">{result.toFixed(2)}K</span>
+                      <span className="text-white font-semibold">{result}K</span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-blue-300">Temperature Difference:</span>
                       <span className={`font-semibold ${parseFloat(temperature) > result ? 'text-red-300' : 'text-blue-300'}`}>
-                        {(parseFloat(temperature) - result).toFixed(2)}K
+                        {(parseFloat(temperature) - result)}K
                       </span>
                     </div>
                   </div>
@@ -261,8 +262,8 @@ export default function IceMeltingPage() {
                   <h4 className="text-cyan-200 font-medium mb-3">💡 Insight</h4>
                   <p className="text-cyan-100 text-sm leading-relaxed">
                     {parseFloat(temperature) > result 
-                      ? `At ${temperature}°C, the ice is likely to melt as it's above the predicted melting point of ${result.toFixed(2)}°C.`
-                      : `At ${temperature}°C, the ice should remain solid as it's below the predicted melting point of ${result.toFixed(2)}°C.`
+                      ? `At ${temperature}°C, the ice is likely to melt as it's above the predicted melting point of ${result}°C.`
+                      : `At ${temperature}°C, the ice should remain solid as it's below the predicted melting point of ${result}°C.`
                     }
                   </p>
                 </div>
