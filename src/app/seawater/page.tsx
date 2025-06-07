@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { ArrowLeft, Send, Loader2, Waves, Thermometer, Beaker } from 'lucide-react'
+import Link from 'next/link'
 
 interface SeawaterResult {
   "Seawater Density (kg/m³)": number
@@ -23,6 +24,7 @@ export default function SeawaterPage() {
   const [result, setResult] = useState<SeawaterResult | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+const Base_url = process.env.NEXT_PUBLIC_BASE_URL
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -42,7 +44,7 @@ export default function SeawaterPage() {
         throw new Error('Salinity must be between 0-50 g/kg')
       }
 
-      const response = await fetch('https://ligninchatbot.onrender.com/predict/seawater', {
+      const response = await fetch(`${Base_url}/predict/seawater`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -108,10 +110,10 @@ export default function SeawaterPage() {
       <div className="relative z-10 container mx-auto px-4 py-8">
         {/* Header */}
         <div className="flex items-center mb-8">
-          <button className="flex items-center text-cyan-300 hover:text-cyan-200 transition-colors mr-6">
+       <Link href="/" className="flex items-center mb-3 text-blue-300 hover:text-blue-200 transition-colors mr-6">
             <ArrowLeft className="mr-2" size={20} />
             Back to Home
-          </button>
+          </Link>
           <div className="flex items-center">
             <Waves className="text-cyan-300 mr-3" size={32} />
             <h1 className="text-3xl font-bold text-white">Seawater Analysis</h1>
