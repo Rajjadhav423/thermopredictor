@@ -46,7 +46,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 export const metadata: Metadata = {
-  title: 'Ocean Ice Lab - Advanced Environmental Analysis',
+  title: 'thermopredictor',
   description: 'Explore ocean dynamics and ice melting patterns with AI-powered predictions',
   keywords: 'ocean, ice, melting, seawater, analysis, AI, machine learning, environmental',
 }

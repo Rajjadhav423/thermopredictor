@@ -240,7 +240,7 @@ export default function HomePage() {
                 <p className="text-blue-100 max-w-4xl mx-auto leading-relaxed text-sm sm:text-base lg:text-lg mb-4 sm:mb-6">
                   Developed as a part of the doctoral research project by <span className="font-semibold text-cyan-300">Ms. Nishaben S. Dholakiya</span> under 
                   the supervision of <span className="font-semibold text-cyan-300">Prof. Anirban Roy</span> and <span className="font-semibold text-cyan-300">Prof. Ranjan Dey</span>. 
-                  This web-based tool was designed at the Water–Energy–Nexus Lab, serving as a practical implementation 
+                  This web-based tool was designed at the Water-Energy-Food Nexus Lab, serving as a practical implementation 
                   of research findings to enhance accessibility and real-time usability for scientific and policy-making communities.
                 </p>
               </div>
@@ -268,7 +268,7 @@ export default function HomePage() {
                     <h4 className="text-white font-semibold text-base sm:text-lg">Institution</h4>
                   </div>
                   <div className="text-blue-100 space-y-1 text-xs sm:text-sm">
-                    <p className="font-medium">Water–Energy–Nexus Lab</p>
+                    <p className="font-medium">Water-Energy-Food Nexus Lab</p>
                     <p>Birla Institute of Technology and Science (BITS) Pilani</p>
                     <p>K.K. Birla Goa Campus</p>
                     <p>Goa, India</p>

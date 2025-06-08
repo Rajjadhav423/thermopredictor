@@ -567,7 +567,7 @@ Use appropriate emojis and keep it conversational but informative.`;
   };
 
   const getMeltingStatus = (meltingPoint: number) => {
-    if (meltingPoint < -10) return { status: 'Frozen Solid', color: 'text-blue-300', bg: 'bg-blue-500/20' }
+    if (meltingPoint < -10) return { status: '(-ve sign indicates the mass loss of ice shelf)', color: 'text-blue-300', bg: 'bg-blue-500/20' }
     if (meltingPoint < -5) return { status: 'Very Cold', color: 'text-cyan-300', bg: 'bg-cyan-500/20' }
     if (meltingPoint < 0) return { status: 'Below Freezing', color: 'text-indigo-300', bg: 'bg-indigo-500/20' }
     if (meltingPoint < 5) return { status: 'Near Melting', color: 'text-yellow-300', bg: 'bg-yellow-500/20' }
@@ -757,7 +757,7 @@ Use appropriate emojis and keep it conversational but informative.`;
                       <Snowflake className="mx-auto mb-4 text-blue-300" size={48} />
                       <h3 className="text-lg text-blue-200 mb-2">Ice Melting Rate</h3>
                       <div className="text-4xl font-bold text-white mb-4">
-                        {result} gton
+                        {result} gton/month
                       </div>
 
                       {(() => {
@@ -788,7 +788,7 @@ Use appropriate emojis and keep it conversational but informative.`;
                       </div>
                       <div className="flex justify-between items-center">
                         <span className="text-blue-300">Ice Melting Rate:</span>
-                        <span className="text-white font-semibold">{result} gton</span>
+                        <span className="text-white font-semibold">{result} gton/month</span>
                       </div>
                     </div>
                   </div>
