@@ -47,7 +47,7 @@ const Base_url = process.env.NEXT_PUBLIC_BASE_URL
     setError('')
 
     try {
-      const response = await fetch(`${Base_url}/multi-output`, {
+      const response = await fetch(`${Base_url}/predict/multi-output`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
