@@ -1445,7 +1445,7 @@ Use appropriate emojis and keep it conversational but informative.`;
                     value={temperature}
                     onChange={(e) => setTemperature(e.target.value)}
                     className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-blue-800/50 border border-cyan-400/50 rounded-lg text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all text-sm sm:text-base"
-                    placeholder="Enter temperature (0-100°C or 273-373K)..."
+                    placeholder="Enter temperature"
                     required
                   />
                   <p className="text-xs text-cyan-300 mt-1">
@@ -1464,7 +1464,7 @@ Use appropriate emojis and keep it conversational but informative.`;
                     value={salinity}
                     onChange={(e) => setSalinity(e.target.value)}
                     className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-blue-800/50 border border-cyan-400/50 rounded-lg text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all text-sm sm:text-base"
-                    placeholder="Enter salinity (0-50 g/kg)..."
+                    placeholder="Enter salinity"
                     required
                   />
                   <p className="text-xs text-cyan-300 mt-1">

@@ -644,11 +644,11 @@ Use appropriate emojis and keep it conversational but informative.`;
     //     return value
     // }
     const formatPredictionValue: FormatPredictionValue = (key, value) => {
-    if (typeof value === 'number') {
-        return value.toFixed(4); // always fixed to 4 decimal places
-    }
-    return value;
-};
+        if (typeof value === 'number') {
+            return value.toFixed(4); // always fixed to 4 decimal places
+        }
+        return value;
+    };
 
 
     interface PredictionIconMap {
@@ -708,8 +708,8 @@ Use appropriate emojis and keep it conversational but informative.`;
                         <button
                             onClick={() => setActiveTab('analyze')}
                             className={`flex-1 sm:flex-none px-3 sm:px-4 py-2 rounded-md flex items-center justify-center transition-all text-sm ${activeTab === 'analyze'
-                                    ? 'bg-blue-500 text-white shadow-lg'
-                                    : 'text-blue-200 hover:text-white'
+                                ? 'bg-blue-500 text-white shadow-lg'
+                                : 'text-blue-200 hover:text-white'
                                 }`}
                         >
                             <Activity className="mr-1 sm:mr-2" size={14} />
@@ -718,8 +718,8 @@ Use appropriate emojis and keep it conversational but informative.`;
                         <button
                             onClick={() => setActiveTab('chat')}
                             className={`flex-1 sm:flex-none px-3 sm:px-4 py-2 rounded-md flex items-center justify-center transition-all relative text-sm ${activeTab === 'chat'
-                                    ? 'bg-blue-500 text-white shadow-lg'
-                                    : 'text-blue-200 hover:text-white'
+                                ? 'bg-blue-500 text-white shadow-lg'
+                                : 'text-blue-200 hover:text-white'
                                 }`}
                         >
                             <MessageCircle className="mr-1 sm:mr-2" size={14} />
@@ -766,8 +766,6 @@ Use appropriate emojis and keep it conversational but informative.`;
                                     </label>
                                     <input
                                         type="number"
-                                        min="2000"
-                                        max="2050"
                                         value={year}
                                         onChange={(e) => setYear(e.target.value)}
                                         className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-indigo-800/50 border border-blue-400/50 rounded-lg text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all text-sm sm:text-base"
@@ -848,7 +846,7 @@ Use appropriate emojis and keep it conversational but informative.`;
                                             </div>
                                             <div className="text-center">
                                                 <div className="text-2xl sm:text-3xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">
-                                                    {formatPredictionValue("one",result.predictions['ice melting rate (gton/month)'])}
+                                                    {formatPredictionValue("one", result.predictions['ice melting rate (gton/month)'])}
                                                     <span className="text-sm sm:text-lg lg:text-2xl text-blue-300 ml-1 sm:ml-2 block sm:inline">gton/month</span>
                                                 </div>
                                                 {(() => {
@@ -950,8 +948,8 @@ Use appropriate emojis and keep it conversational but informative.`;
                                         >
                                             <div
                                                 className={`max-w-[85%] sm:max-w-[80%] p-3 sm:p-4 rounded-2xl ${message.type === 'user'
-                                                        ? 'bg-cyan-500 text-white ml-2'
-                                                        : 'bg-blue-800/50 text-cyan-100 mr-2 border border-cyan-400/20'
+                                                    ? 'bg-cyan-500 text-white ml-2'
+                                                    : 'bg-blue-800/50 text-cyan-100 mr-2 border border-cyan-400/20'
                                                     }`}
                                             >
                                                 <div className="flex items-start space-x-2">

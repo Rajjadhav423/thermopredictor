@@ -1068,7 +1068,7 @@ return (
                   value={temperature}
                   onChange={(e) => setTemperature(e.target.value)}
                   className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-indigo-800/50 border border-blue-400/50 rounded-lg text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all text-sm sm:text-base"
-                  placeholder="Enter temperature in Kelvin..."
+                  placeholder="Enter temperature in Kelvin"
                   required
                 />
                 <p className="text-xs text-blue-300 mt-1">
@@ -1083,12 +1083,10 @@ return (
                 </label>
                 <input
                   type="number"
-                  min="2000"
-                  max="2030"
                   value={year}
                   onChange={(e) => setYear(e.target.value)}
                   className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-indigo-800/50 border border-blue-400/50 rounded-lg text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all text-sm sm:text-base"
-                  placeholder="Enter year (2000-2030)..."
+                  placeholder="Enter year"
                   required
                 />
               </div>
