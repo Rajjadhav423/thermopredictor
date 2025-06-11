@@ -98,7 +98,7 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4 mb-4 sm:mb-8">
               <Waves className="text-cyan-300 animate-bounce" size={32} />
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-300 to-blue-200 bg-clip-text text-transparent text-center px-2">
-                Thermopredictor
+                Oceanomica
               </h1>
               <Snowflake className="text-blue-200 animate-spin-slow" size={32} />
             </div>
