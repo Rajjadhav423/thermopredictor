@@ -102,105 +102,104 @@ export default function HomePage() {
               </h1>
               <Snowflake className="text-blue-200 animate-spin-slow" size={32} />
             </div>
-            
+
             <p className="text-base sm:text-lg md:text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed px-2">
-              Explore the fascinating world of ocean dynamics and ice melting patterns. 
-              Powered by advanced AI models for real-time environmental predictions.
+              Dynamic insights into seawater behaviour and ice melt, driven by climate-aware AI. Forecast. Understand.Adapt.
             </p>
           </div>
 
           {/* Navigation Cards */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-4xl w-full mb-8 sm:mb-16">
             {/* Seawater Prediction Card */}
-          <Link href='/seawater'>
-            <div className="group cursor-pointer">
-              <div className="relative bg-gradient-to-br from-blue-800/40 to-cyan-700/40 backdrop-blur-lg border border-blue-400/30 rounded-2xl p-6 sm:p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-cyan-300/50">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
-                <div className="relative z-10">
-                  <div className="flex items-center justify-between mb-4 sm:mb-6">
-                    <Droplets className="text-cyan-300 group-hover:scale-110 transition-transform duration-300" size={32} />
-                    <ChevronRight className="text-blue-200 group-hover:translate-x-2 transition-transform duration-300" size={20} />
-                  </div>
-                  
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Seawater Analysis</h3>
-                  <p className="text-sm sm:text-base text-blue-100 mb-4 sm:mb-6 leading-relaxed">
-                    Analyze seawater properties including density, thermal expansion, 
-                    compressibility, and acoustic characteristics based on temperature and salinity.
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    {['Density', 'Velocity', 'Thermal Expansion', 'Compressibility'].map((tag) => (
-                      <span key={tag} className="px-2 sm:px-3 py-1 bg-cyan-500/20 text-cyan-200 rounded-full text-xs sm:text-sm">
-                        {tag}
-                      </span>
-                    ))}
+            <Link href='/seawater'>
+              <div className="group cursor-pointer">
+                <div className="relative bg-gradient-to-br from-blue-800/40 to-cyan-700/40 backdrop-blur-lg border border-blue-400/30 rounded-2xl p-6 sm:p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-cyan-300/50">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-between mb-4 sm:mb-6">
+                      <Droplets className="text-cyan-300 group-hover:scale-110 transition-transform duration-300" size={32} />
+                      <ChevronRight className="text-blue-200 group-hover:translate-x-2 transition-transform duration-300" size={20} />
+                    </div>
+
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Seawater Analysis</h3>
+                    <p className="text-sm sm:text-base text-blue-100 mb-4 sm:mb-6 leading-relaxed">
+                      Analyze seawater properties including density, thermal expansion,
+                      compressibility, and acoustic characteristics based on temperature and salinity.
+                    </p>
+
+                    <div className="flex flex-wrap gap-2">
+                      {['Density', 'Velocity', 'Thermal Expansion', 'Compressibility'].map((tag) => (
+                        <span key={tag} className="px-2 sm:px-3 py-1 bg-cyan-500/20 text-cyan-200 rounded-full text-xs sm:text-sm">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </Link>
+            </Link>
 
             {/* Ice Melting Prediction Card */}
 
-           <Link href='/ice-melting'>
+            <Link href='/ice-melting'>
               <div className="group cursor-pointer">
-              <div className="relative bg-gradient-to-br from-indigo-800/40 to-blue-700/40 backdrop-blur-lg border border-blue-400/30 rounded-2xl p-6 sm:p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-blue-300/50">
-                <div className="absolute inset-0 bg-gradient-to-br from-indigo-400/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
-                <div className="relative z-10">
-                  <div className="flex items-center justify-between mb-4 sm:mb-6">
-                    <Thermometer className="text-blue-300 group-hover:scale-110 transition-transform duration-300" size={32} />
-                    <ChevronRight className="text-blue-200 group-hover:translate-x-2 transition-transform duration-300" size={20} />
-                  </div>
-                  
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Ice Melting Point</h3>
-                  <p className="text-sm sm:text-base text-blue-100 mb-4 sm:mb-6 leading-relaxed">
-                    Predict ice melting points based on environmental conditions including 
-                    temperature, seasonal variations, and temporal factors.
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    {['Temperature', 'Seasonal', 'Temporal', 'Climate'].map((tag) => (
-                      <span key={tag} className="px-2 sm:px-3 py-1 bg-blue-500/20 text-blue-200 rounded-full text-xs sm:text-sm">
-                        {tag}
-                      </span>
-                    ))}
+                <div className="relative bg-gradient-to-br from-indigo-800/40 to-blue-700/40 backdrop-blur-lg border border-blue-400/30 rounded-2xl p-6 sm:p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-blue-300/50">
+                  <div className="absolute inset-0 bg-gradient-to-br from-indigo-400/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-between mb-4 sm:mb-6">
+                      <Thermometer className="text-blue-300 group-hover:scale-110 transition-transform duration-300" size={32} />
+                      <ChevronRight className="text-blue-200 group-hover:translate-x-2 transition-transform duration-300" size={20} />
+                    </div>
+
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Ice Melting Point</h3>
+                    <p className="text-sm sm:text-base text-blue-100 mb-4 sm:mb-6 leading-relaxed">
+                      Predict ice melting points based on environmental conditions including
+                      temperature, seasonal variations, and temporal factors.
+                    </p>
+
+                    <div className="flex flex-wrap gap-2">
+                      {['Temperature', 'Seasonal', 'Temporal', 'Climate'].map((tag) => (
+                        <span key={tag} className="px-2 sm:px-3 py-1 bg-blue-500/20 text-blue-200 rounded-full text-xs sm:text-sm">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            </Link>         
+            </Link>
 
             {/* Combined Prediction Card */}
-           <Link href='/allprediction'>
-            <div className="group cursor-pointer lg:col-span-2">
-              <div className="relative bg-gradient-to-br from-indigo-800/40 to-blue-700/40 backdrop-blur-lg border border-blue-400/30 rounded-2xl p-6 sm:p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-blue-300/50">
-                <div className="absolute inset-0 bg-gradient-to-br from-indigo-400/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
-                <div className="relative z-10">
-                  <div className="flex items-center justify-between mb-4 sm:mb-6">
-                    <Thermometer className="text-blue-300 group-hover:scale-110 transition-transform duration-300" size={32} />
-                    <ChevronRight className="text-blue-200 group-hover:translate-x-2 transition-transform duration-300" size={20} />
-                  </div>
-                  
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Combined Prediction</h3>
-                  <p className="text-sm sm:text-base text-blue-100 mb-4 sm:mb-6 leading-relaxed">
-                    Comprehensive analysis including ice melting rate, ultrasonic velocity, density, acoustic impedance, 
-                    compressibility parameters, thermal properties, and energy densities for complete environmental assessment.
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    {['Multi-Parameter', 'Comprehensive', 'Advanced Analytics', 'Full Spectrum'].map((tag) => (
-                      <span key={tag} className="px-2 sm:px-3 py-1 bg-blue-500/20 text-blue-200 rounded-full text-xs sm:text-sm">
-                        {tag}
-                      </span>
-                    ))}
+            <Link href='/allprediction'>
+              <div className="group cursor-pointer lg:col-span-2">
+                <div className="relative bg-gradient-to-br from-indigo-800/40 to-blue-700/40 backdrop-blur-lg border border-blue-400/30 rounded-2xl p-6 sm:p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-blue-300/50">
+                  <div className="absolute inset-0 bg-gradient-to-br from-indigo-400/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-between mb-4 sm:mb-6">
+                      <Thermometer className="text-blue-300 group-hover:scale-110 transition-transform duration-300" size={32} />
+                      <ChevronRight className="text-blue-200 group-hover:translate-x-2 transition-transform duration-300" size={20} />
+                    </div>
+
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Combined Prediction</h3>
+                    <p className="text-sm sm:text-base text-blue-100 mb-4 sm:mb-6 leading-relaxed">
+                      Comprehensive analysis including ice melting rate, ultrasonic velocity, density, acoustic impedance,
+                      compressibility parameters, thermal properties, and energy densities for complete environmental assessment.
+                    </p>
+
+                    <div className="flex flex-wrap gap-2">
+                      {['Multi-Parameter', 'Comprehensive', 'Advanced Analytics', 'Full Spectrum'].map((tag) => (
+                        <span key={tag} className="px-2 sm:px-3 py-1 bg-blue-500/20 text-blue-200 rounded-full text-xs sm:text-sm">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-           </Link>
+            </Link>
           </div>
 
           {/* Features Section */}
@@ -238,9 +237,9 @@ export default function HomePage() {
               {/* Main Research Info */}
               <div className="text-center mb-6 sm:mb-8">
                 <p className="text-blue-100 max-w-4xl mx-auto leading-relaxed text-sm sm:text-base lg:text-lg mb-4 sm:mb-6">
-                  Developed as a part of the doctoral research project by <span className="font-semibold text-cyan-300">Ms. Nishaben S. Dholakiya</span> under 
-                  the supervision of <span className="font-semibold text-cyan-300">Prof. Anirban Roy</span> and <span className="font-semibold text-cyan-300">Prof. Ranjan Dey</span>. 
-                  This web-based tool was designed at the Water-Energy-Food Nexus Lab, serving as a practical implementation 
+                  Developed as a part of the doctoral research project by <span className="font-semibold text-cyan-300">Ms. Nishaben S. Dholakiya</span> under
+                  the supervision of <span className="font-semibold text-cyan-300">Prof. Anirban Roy</span> and <span className="font-semibold text-cyan-300">Prof. Ranjan Dey</span>.
+                  This web-based tool was designed at the Water-Energy-Food Nexus Lab, serving as a practical implementation
                   of research findings to enhance accessibility and real-time usability for scientific and policy-making communities.
                 </p>
               </div>
@@ -293,7 +292,7 @@ export default function HomePage() {
               {/* Copyright */}
               <div className="text-center pt-4 sm:pt-6 border-t border-white/10">
                 <p className="text-blue-200 text-xs sm:text-sm">
-                  © 2024 Water–Energy–Nexus Lab, BITS Pilani Goa Campus. 
+                  © 2024 Water–Energy–Nexus Lab, BITS Pilani Goa Campus.
                   <span className="block sm:inline sm:ml-2 mt-1 sm:mt-0">
                     Developed for advancing environmental research and policy implementation.
                   </span>

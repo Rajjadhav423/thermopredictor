@@ -846,7 +846,7 @@ export default function IntelligentSeawaterAnalyzer() {
   const [result, setResult] = useState<SeawaterResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-
+  const Base_url = process.env.NEXT_PUBLIC_BASE_URL
   // Chat states
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([
     {
@@ -879,21 +879,22 @@ export default function IntelligentSeawaterAnalyzer() {
     setError('');
 
     try {
-      const tempK = parseFloat(temperature) > 100 ? parseFloat(temperature) : parseFloat(temperature) + 273.15;
+    //  const tempK = parseFloat(temperature) > 100 ? parseFloat(temperature) : parseFloat(temperature) + 273.15;
       const salinityValue = parseFloat(salinity);
 
-      if (tempK < 273.15 || tempK > 373.15) {
-        throw new Error('Temperature must be between 0-100°C (273.15-373.15K)');
-      }
-      if (salinityValue < 0 || salinityValue > 50) {
-        throw new Error('Salinity must be between 0-50 g/kg');
-      }
-
-      const response = await fetch('https://ligninchatbot.onrender.com/predict/seawater', {
+      // if (tempK < 273.15 || tempK > 373.15) {
+      //   throw new Error('Temperature must be between 0-100°C (273.15-373.15K)');
+      // }
+      // if (salinityValue < 0 || salinityValue > 50) {
+      //   throw new Error('Salinity must be between 0-50 g/kg');
+      // }
+    console.log(Base_url)
+      // const response = await fetch('https://ligninchatbot.onrender.com/predict/seawater', {
+            const response = await fetch(`${Base_url}/predict/seawater`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          temperature_k: tempK,
+          temperature_k: temperature,
           salinity_g_kg: salinityValue
         })
       });
